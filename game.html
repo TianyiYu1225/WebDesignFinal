@@ -186,7 +186,12 @@
 					}
 				}
 				if(match==8){
-					alert("Congratulations! You have won!");
+					//alert("Congratulations! You have won!");
+					//freeze all buttons (end game)
+					for(i=1;i<10;i++){//check every slot and see if they match the position id
+					document.getElementById(i+"").disabled=true;
+					}
+				
 				}
 			}
 			//randomize gameboard

@@ -3,61 +3,114 @@
 var board=[[0,0,0],
            [0,0,0],
            [0,0,0]];
+
+var blank;
+
+var imgPath = "pictures";
+var r = Math.floor(Math.random() * 3);
+if(r==0)
+	imgPath+="/dog/";
+else if(r==1)
+	imgPath+="/cat/";
+else
+	imgPath+="/panda/";
+
+document.getElementById("fullPic").src = imgPath+"full.jpg";
+
 //randomize gameboard
 randomize();
 /*-------------------------------------------------*/
 
-
 //swaps clicked block with empty spot
 function swap(position){
 	//check if blank is clicked
-	if(document.getElementById(position+"").innerHTML==""){
+	if(position==blank)
 		return;
+
+	var imgNum = getBoardFromPos(position);
+
+	var pi = 0;
+	var pj = position;
+	while(pj>3){
+		pj-=3;
+		pi++;
 	}
+	pj--;
+	var bi = 0;
+	var bj = blank;
+	while(bj>3){
+		bj-=3;
+		bi++;
+	}
+	bj--;
+
+	var posSRC = imgPath+imgNum+".jpg";
+	var blankSRC = imgPath+"blank.jpg";
+
 	//check if clicked tile is next to blank
 	//check right
-	if((position % 3!=0) && document.getElementById((position+1)+"").innerHTML==""){
+	if((position%3 != 0) && position+1 == blank){
 		console.log("move this to the right");
 		//swap the innerHTML's
-		document.getElementById((position+1)+"").innerHTML=document.getElementById(position).innerHTML;
-		document.getElementById(position).innerHTML="";
+		document.getElementById((position+1)+"").src = posSRC;
+		document.getElementById(position).src=blankSRC;
+		var temp = board[bi][bj];
+		board[bi][bj] = board[pi][pj];
+		board[pi][pj] = temp;
+		blank = position;
 	}
 	//check left
-	if((position % 3 !=1) && document.getElementById((position-1)+"").innerHTML==""){
+	else if((position%3 != 1) && position-1 == blank){
 		console.log("move this to the left");
 		//swap the innerHTML's
-		document.getElementById((position-1)+"").innerHTML=document.getElementById(position).innerHTML;
-		document.getElementById(position).innerHTML="";
+		document.getElementById((position-1)+"").src = posSRC;
+		document.getElementById(position).src=blankSRC;
+		var temp = board[bi][bj];
+		board[bi][bj] = board[pi][pj];
+		board[pi][pj] = temp;
+		blank = position;
 	}
 	//check top
-	if((position>=4) && document.getElementById((position-3)+"").innerHTML==""){
+	else if((position>3) && position-3 == blank){
 		console.log("move this up");
 		//swap the innerHTML's
-		document.getElementById((position-3)+"").innerHTML=document.getElementById(position).innerHTML;
-		document.getElementById(position).innerHTML="";
+		document.getElementById((position-3)+"").src = posSRC;
+		document.getElementById(position).src=blankSRC;
+		var temp = board[bi][bj];
+		board[bi][bj] = board[pi][pj];
+		board[pi][pj] = temp;
+		blank = position;
 	}
 	//check bot
-	if((position<=6) && document.getElementById((position+3)+"").innerHTML==""){
+	else if((position<7) && position+3 == blank){
 		console.log("move this down");
 		//swap the innerHTML's
-		document.getElementById((position+3)+"").innerHTML=document.getElementById(position).innerHTML;
-		document.getElementById(position).innerHTML="";
+		document.getElementById((position+3)+"").src = posSRC;
+		document.getElementById(position).src=blankSRC;
+		var temp = board[bi][bj];
+		board[bi][bj] = board[pi][pj];
+		board[pi][pj] = temp;
+		blank = position;
 	}
 
 
 	//after swapping, check if user has won
 	var i;
 	var match=0;
-	for(i=1;i<9;i++){//check every slot and see if they match the position id
-		if(document.getElementById(i+"").innerHTML==i){
-			match++;
+	for(i=0; i<3; i++){
+		for(j=0; j<3; j++){
+			if(board[i][j] == (i*3) + (j+1))
+				match++;
 		}
 	}
-	if(match==8){
-		//alert("Congratulations! You have won!");
+	console.log(match);
+	if(match==9){
+		document.getElementById("9").src = imgPath+"9.jpg";
 		//freeze all buttons (end game)
-		for(i=1;i<10;i++){//check every slot and see if they match the position id
+		for(i=1;i<10;i++){
 			document.getElementById(i+"").disabled=true;
+			document.getElementById("t"+i).style.border = "none";
+			document.getElementById("board").style.border = "5px solid green";
 		}
 	
 	}
@@ -77,7 +130,7 @@ function randomize(){
 	var min = 20;
 	var max = 50;
 	var r = Math.floor(Math.random()*(max-min+1)+min);
-	var blank = 9;
+	blank = 9;
 	for(i=0; i<r; i++){
 		var adj = getRandomAdjacent(blank);
 		var temp = getBoardFromPos(adj);
@@ -89,16 +142,19 @@ function randomize(){
 	var match=0;
 	for(i=1; i<3; i++){
 		for(j=0; j<3; j++){
-			if(board[i][j]==match+1)
+			if(board[i][j]==(i*3)+(j+1))
 				match++;
 		}
 	}
 	if(match==9){
+		console.log("extra random");
 		var adj = getRandomAdjacent(9);
 		var temp = getBoardFromPos(adj);
 		setBoard(adj, getBoardFromPos(9));
 		setBoard(9, temp);
+		blank = adj;
 	}
+
 	updateBoard();
 }
 
@@ -168,10 +224,13 @@ function updateBoard(){
 	for(i=0;i<3;i++){
 		for(j=0;j<3;j++){
 			btnindex++;
-			document.getElementById(btnindex+"").innerHTML=board[i][j];
+			var fullPath = imgPath+board[i][j];
+			var tempSRC = fullPath+".jpg";
+			document.getElementById(btnindex+"").src=tempSRC;
 			if(board[i][j]==9){
-				document.getElementById(btnindex+"").innerHTML="";
-				document.getElementById(btnindex+"").active=false;
+				tempSRC = imgPath+"blank.jpg";
+				document.getElementById(btnindex+"").src=tempSRC;
+				//document.getElementById(btnindex+"").active=false;
 			}
 		}
 	}

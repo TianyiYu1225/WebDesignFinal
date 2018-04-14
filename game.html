@@ -28,23 +28,25 @@
 		</h2>
 
 		<!-- game board -->
-		<table>
+		<table id="board">
   			<tr>
-   				<td><button class="gameBtn" id="1" onclick="swap(1)"></button></th>
-   				<td><button class="gameBtn" id="2" onclick="swap(2)"></button></th>
-   				<td><button class="gameBtn" id="3" onclick="swap(3)"></button></th>
+   				<td id="t1"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="1" onclick="swap(1)"></input></th>
+   				<td id="t2"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="2" onclick="swap(2)"></input></th>
+   				<td id="t3"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="3" onclick="swap(3)"></input></th>
   			</tr>
   			<tr>
-    			<td><button class="gameBtn" id="4" onclick="swap(4)"></button></td>
-    			<td><button class="gameBtn" id="5" onclick="swap(5)"></button></td>
-    			<td><button class="gameBtn" id="6" onclick="swap(6)"></button></td>
+    			<td id="t4"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="4" onclick="swap(4)"></input></td>
+    			<td id="t5"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="5" onclick="swap(5)"></input></td>
+    			<td id="t6"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="6" onclick="swap(6)"></input></td>
 			</tr>
 			<tr>
-    			<td><button class="gameBtn" id="7" onclick="swap(7)"></button></td>
-    			<td><button class="gameBtn" id="8" onclick="swap(8)"></button></td>
-    			<td><button class="gameBtn" id="9" onclick="swap(9)"></button></td>
+    			<td id="t7"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="7" onclick="swap(7)"></input></td>
+    			<td id="t8"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="8" onclick="swap(8)"></input></td>
+    			<td id="t9"><input type="image" src="pictures/dog/blank.jpg" class="gameBtn" id="9" onclick="swap(9)"></input></td>
 			</tr>
 		</table>
+
+		<img id="fullPic" src="pictures/dog/blank.jpg" height=300px width=300px>
 		
 		<script src="js/game.js"></script>
 

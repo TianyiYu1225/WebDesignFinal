@@ -1,12 +1,19 @@
+#videoBG{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
 body{
 	background-image: url("../pictures/bg.jpg");
 	background-position: top;
 	position: absolute;
 	left: 20px;
 	right: 20px;
-	width: 1200px;
+	width: 60%;
 	margin: 0 auto;
-	width: 1200px;
 }
 
 #pageTitle{
@@ -81,7 +88,8 @@ li a {
 #board{
 	border: 1px solid black;
 	margin-left: 50px;
-	margin-right: 35%;
+	margin-right: 25%;
+	margin-top: 10px;
 	float: left;
 	border-collapse: collapse;
 }
@@ -100,6 +108,8 @@ li a {
 
 #fullPic{
 	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 10px;
 	border: 1px solid black;
 }
 

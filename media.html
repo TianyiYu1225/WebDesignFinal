@@ -81,6 +81,28 @@
 			margin-left: 50px;
 		}
 
+		#imgmapping{
+			width:365px; 
+			height:273px;
+			/*margin-left: 30px;*/
+		}
+
+		figure{
+			margin-left: 50px;
+			float: left;
+		}
+
+		#imgtransparency{
+			width:266px; 
+			height:273px;
+			float: left;
+			margin-top:15px;
+		}
+
+		#imgtransparency:hover{
+			opacity: 0.5;
+		}
+
 	</style>
 
 </head>
@@ -128,6 +150,27 @@
 
 
 
+
+<div>
+		<h2 id="contentTitle">
+			Gallery
+		</h2>
+
+		<figure>
+			<img id="imgmapping" src="pictures/imgmapping.jpg" alt="Animals" usemap="#animalmap" />
+			<figcaption>Fig.1 - This is an image with mapping. <br>Click on animal for external link.</figcaption>
+		</figure>
+
+		<a href="https://en.wikipedia.org/wiki/Giraffe"><img id="imgtransparency" src="pictures/imgtransparency.jpg" alt="Animals"/></a>
+
+
+
+		<map name="animalmap">
+			<area shape="rect" coords="118,122,205,195" href="https://en.wikipedia.org/wiki/Cat" />
+			<area shape="rect" coords="215,125,313,221" href="https://en.wikipedia.org/wiki/Guinea_pig" />
+		</map>
+
+</div>
 
 	</div>
 </body>

@@ -3,111 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Media</title>
-
-	<style>
-		body{
-			background-image: url("pictures/bg.jpg");
-			background-position: top;
-			position:absolute;
-			left:20px;
-			right:20px;
-			width: 1200px;
-  			margin: 0 auto;
-		}
-
-		#pageTitle{
-			text-align: center;
-		}
-		/*menu bar style*/
-		#mainmenu {
-    		list-style-type: none;
-    		margin: 0;
-    		padding: 0;
-    		overflow: hidden;
-    		background-color: white;
-    		border-bottom-style: solid;
-    		border-bottom-color:white ;
-		}
-
-		li {
-    		float: left;
-
-		}
-
-		li a {
-    		display: block;
-    		color: black;
-    		text-align: center;
-    		padding: 14px 16px;
-    		text-decoration: none;
-    		margin-right: 10px;
-    		margin-left: 10px;
-    		font-size: 20px;
-		}
-
-		.active, li a:hover{
-    		border-bottom-style: solid;
-    		border-bottom-color:#08298A ;
-    		color: #08298A;
-		}
-
-		#bodyBlock{
-			background-color:white;
-			opacity: 0.8;
-			position:absolute;
-			align-self:center;
-			height:1650px;
-			right:50px;
-			left:50px;
-		}
-
-		#contentTitle{
-			margin-left: 50px;
-			margin-top:50px;
-		}
-
-		#contentText{
-			margin-left: 50px;
-			margin-top: 30px;
-		}
-
-		#youtubeVideo{
-			width:560px;
-			height:315px;
-			margin-left: 50px;
-		}
-
-		.twitter-tweet{
-			margin-left: 50px;
-		}
-
-		#imgmapping{
-			width:365px; 
-			height:273px;
-			/*margin-left: 30px;*/
-		}
-
-		figure{
-			margin-left: 50px;
-			float: left;
-		}
-
-		#imgtransparency{
-			width:266px; 
-			height:273px;
-			float: left;
-			margin-top:15px;
-		}
-
-		#imgtransparency:hover{
-			opacity: 0.5;
-		}
-
-	</style>
-
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
+	<video autoplay muted loop id="videoBG">
+		<source src="videos/videoBG.mp4" type="video/mp4">
+	</video>
+	
 	<div id="bodyBlock">
 
 		<h1 id="pageTitle"><b>Media</b></h1>
@@ -145,11 +48,10 @@
 			</p>&mdash; Pizzle (@Pizzle_me) 
 			<a href="https://twitter.com/Pizzle_me/status/634300558350938112?ref_src=twsrc%5Etfw">August 20, 2015</a>
 		</blockquote>
+
+		
+
 		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
 
 <div>
 		<h2 id="contentTitle">
@@ -173,5 +75,6 @@
 </div>
 
 	</div>
+	<<!-- p id="footer">Web Design Final Project 2018</p> -->
 </body>
 </html>

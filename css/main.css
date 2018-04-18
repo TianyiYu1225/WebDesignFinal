@@ -1,26 +1,38 @@
+#videoBG{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
 body{
 	background-image: url("../pictures/bg.jpg");
 	background-position: top;
-	position:absolute;
-	left:20px;
-	right:20px;
-	width: 1200px;
-		margin: 0 auto;
-		width: 1200px;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	width: 60%;
+	margin: 0 auto;
 }
 
 #pageTitle{
 	text-align: center;
+	background-color: gray;
+	margin: 0px;
+	padding: 0.7em 0em;
 }
+
 /*menu bar style*/
 #mainmenu {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: white;
+	background-color: black;
 	border-bottom-style: solid;
-	border-bottom-color:white ;
+	border-bottom-color: white;
+	padding-bottom: .2em;
 }
 
 li {
@@ -29,7 +41,7 @@ li {
 
 li a {
 	display: block;
-	color: black;
+	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -40,23 +52,21 @@ li a {
 
 .active, li a:hover{
 	border-bottom-style: solid;
-	border-bottom-color:#08298A;
-	color: #08298A;
+	border-bottom-color: white;
 }
 
 #bodyBlock{
-	background-color:white;
+	background-color: white;
 	opacity: 0.8;
-	position:absolute;
-	align-self:center;
-	height:650px;
-	right:50px;
-	left:50px;
+	position: absolute;
+	align-self: center;
+	right: 20px;
+	left: 20px;
 }
 
 #contentTitle{
 	margin-left: 50px;
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 #contentText{
@@ -64,27 +74,86 @@ li a {
 	margin-top: 30px;
 }
 
-table{
+#footer{
+	background-color: gray;
+	text-align: right;
+	font-size: 16px;
+	font-weight: bold;
+	padding: .5em 0em;
+	padding-right: 0.2em;
+	margin-bottom: 0px;
+	margin-top: 50px;
+}
+
+#board{
 	border: 1px solid black;
 	margin-left: 50px;
+	margin-right: 25%;
+	margin-top: 10px;
 	float: left;
 	border-collapse: collapse;
 }
 
-td{
+#board tr td{
 	height: 100px;
 	width: 100px;
 	border: 1px solid black;
 }
 
 .gameBtn{
-	height:100px;
-	width:100px;
+	height: 100px;
+	width: 100px;
 	font-size: 20px;
 }
 
 #fullPic{
-	float: right;
 	margin-right: 50px;
-	border:1px solid black;
+	margin-left: 50px;
+	margin-top: 10px;
+	border: 1px solid black;
+}
+
+#socialMediaDiv{
+	margin-left: 50px;
+	margin-top: 250px;
+}
+
+#smtext{
+	font-size: 15px;
+}
+
+.icons{
+	height: 20px;
+}
+
+#youtubeVideo{
+	width: 560px;
+	height: 315px;
+	margin-left: 50px;
+}
+
+.twitter-tweet{
+	margin-left: 50px;
+}
+
+#imgmapping{
+	width:365px; 
+	height:273px;
+	/*margin-left: 30px;*/
+}
+
+figure{
+	margin-left: 50px;
+	float: left;
+}
+
+#imgtransparency{
+	width:266px; 
+	height:273px;
+	float: left;
+	margin-top:15px;
+}
+
+#imgtransparency:hover{
+	opacity: 0.5;
 }

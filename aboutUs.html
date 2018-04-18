@@ -4,94 +4,15 @@
 	<meta charset="utf-8">
 	<title>About Us</title>
 
-	<style>
-		body{
-			background-image: url("pictures/bg.jpg");
-			background-position: top;
-			position:absolute;
-			left:20px;
-			right:20px;
-			width: 1200px;
-  			margin: 0 auto;
-  			width: 1200px;
-		}
-
-		#pageTitle{
-			text-align: center;
-		}
-		/*menu bar style*/
-		#mainmenu {
-    		list-style-type: none;
-    		margin: 0;
-    		padding: 0;
-    		overflow: hidden;
-    		background-color: white;
-    		border-bottom-style: solid;
-    		border-bottom-color:white ;
-		}
-
-		li {
-    		float: left;
-
-		}
-
-		li a {
-    		display: block;
-    		color: black;
-    		text-align: center;
-    		padding: 14px 16px;
-    		text-decoration: none;
-    		margin-right: 10px;
-    		margin-left: 10px;
-    		font-size: 20px;
-		}
-
-		.active, li a:hover{
-    		border-bottom-style: solid;
-    		border-bottom-color:#08298A ;
-    		color: #08298A;
-		}
-
-		#bodyBlock{
-			background-color:white;
-			opacity: 0.8;
-			position:absolute;
-			align-self:center;
-			height:650px;
-			right:50px;
-			left:50px;
-		}
-
-		#contentTitle{
-			margin-left: 50px;
-			margin-top:50px;
-		}
-
-		#contentText{
-			margin-left: 50px;
-			margin-top: 30px;
-		}
-
-		#socialMediaDiv{
-			position:absolute;
-			bottom: 20px;
-			margin-left: 50px;
-			text-align: center;
-		}
-
-		#smtext{
-			font-size: 15px;
-		}
-
-		.icons{
-			height: 20px;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
 <body>
+	<video autoplay muted loop id="videoBG">
+		<source src="videos/videoBG.mp4" type="video/mp4">
+	</video>
+	
 	<div id="bodyBlock">
 
 		<h1 id="pageTitle"><b>About Us</b></h1>
@@ -120,11 +41,7 @@
 			<a href="https://github.com/TianyiYu1225/WebDesignFinal"><img class="icons" src="pictures/github.png"></a>
 		</div>
 
-
-
-
-
-
+		<p id="footer">Web Design Final Project 2018</p>
 	</div>
 </body>
 </html>

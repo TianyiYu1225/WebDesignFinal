@@ -56,6 +56,30 @@ li a {
 	border-bottom-color: white;
 }
 
+/*---------------when dropdownbtn is on hover, turn dropdownlist red-------------------*/
+
+/*this is just some testing code, but it's not responding, 
+so I cant move on to building the actual dropdown menu
+
+but eventually i will have the dropdownlist display:none, 
+then when dropdownbtn on hover, set dropdownlist display:block,
+or something like that. */
+
+.dropdownbtn:hover .dropdownlist{
+	background-color: red;
+}
+
+/*.dropdownlist{
+	background-color: red;
+}*/
+
+/*.dropdownlist a{
+	color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}*/
+/*--------------------------------------*/
 #bodyBlock{
 	background-color: white;
 	opacity: 0.8;

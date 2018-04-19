@@ -33,6 +33,7 @@ body{
 	border-bottom-style: solid;
 	border-bottom-color: white;
 	padding-bottom: .2em;
+	position: relative;
 }
 
 li {
@@ -196,4 +197,27 @@ figure{
   	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   	text-decoration: none;
+}
+
+#contactMe{
+	color: black;
+	padding: 15px;
+	border: solid 2px black;
+	width: 35%;
+	margin: auto;
+	display: table;
+	text-align: center;
+}
+
+#contactMe input[type=submit],[type=reset]{
+	background-color: #3B3738;  
+	color: white;   
+	padding: 7px 14px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-left: 10px;
+} 
+#contactMe input[type=submit]:hover,[type=reset]:hover{ 
+	background-color: #45a049;
 }

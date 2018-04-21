@@ -6,14 +6,7 @@ var board=[[0,0,0],
 
 var blank;
 
-var imgPath = "pictures";
-var r = Math.floor(Math.random() * 3);
-if(r==0)
-	imgPath+="/dog/";
-else if(r==1)
-	imgPath+="/cat/";
-else
-	imgPath+="/panda/";
+var imgPath = "pictures/dog/";
 
 document.getElementById("fullPic").src = imgPath+"full.jpg";
 

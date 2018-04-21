@@ -1,89 +1,88 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8"></meta>
-  <title>Home</title>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Home</title>
 
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-  <video autoplay muted loop id="videoBG">
-		<source src="videos/videoBG.mp4" type="video/mp4">
-	</video>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<video autoplay muted loop id="videoBG">
+			<source src="videos/videoBG.mp4" type="video/mp4">
+		</video>
 
-  <div id="bodyBlock">
-    <h1 id="pageTitle"><b>Home</b></h1>
+		<div id="bodyBlock">
+			<h1 id="pageTitle"><b>Home</b></h1>
 
-    <div class="navbar">
-        <a class="active" href="home.html">Home</a>
-          <div class="dropdown">
-            <button class="dropbtn">Game
-            </button>
-            <div class="dropdown-content">
-              <a href="game.html">Game 1</a>
-              <a href="game.html">Game 2</a>
-              <a href="game.html">Game 3</a>
-            </div>
-          </div> 
-          <a href="magicNum.html">Magic Number</a>
-        <a href="media.html">Media</a>
-        <a href="contactUs.html">Contact Us</a>
-        <a href="aboutUs.html">About Us</a>
-      </div>
+			<div class="navbar">
+				<a class="active" href="home.html">Home</a>
+				<div class="dropdown">
+					<button class="dropbtn">Game</button>
+					<div class="dropdown-content">
+						<a href="game.html">Game 1</a>
+						<a href="game.html">Game 2</a>
+						<a href="game.html">Game 3</a>
+					</div>
+				</div> 
+				<a href="magicNum.html">Magic Number</a>
+				<a href="media.html">Media</a>
+				<a href="contactUs.html">Contact Us</a>
+				<a href="aboutUs.html">About Us</a>
+			</div>
 
-    <h2 id="contentTitle">
-      Home
-    </h2>
-    <div id="contentText">
-      Welcome to our website! Here, you will find some games, some information behind the games that we have made, and some information about our team.
-      <br>
-      Stay a while, and enjoy!
-      <br>
-    </div>
+			<h2 id="contentTitle">Home</h2>
+			<div id="contentText">
+				Welcome to our website! Here, you will find some games, some information behind the games that we have made, and some information about our team.
+				<br>
+				Stay a while, and enjoy!
+				<br>
+			</div>
 
-    <div id="contentText">
-      This is a map of the popular red panda areas. Feel free to check it out!
-      <br>
-      <div id="map" style="width:100%;height:400px;padding-left: 0">
-        <script>
-        function myMap() {
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {
-                center: new google.maps.LatLng(28.433869, 91.157091),
-                zoom: 6
-            };
-            var map = new google.maps.Map(mapCanvas, mapOptions);
+			<div id="contentText">
+				This is a map of the popular red panda areas. Feel free to check it out!
+				<br>
+				<div id="map" style="width:100%;height:400px;padding-left: 0">
+					<script>
+						function myMap() {
+							var mapCanvas = document.getElementById("map");
+							var mapOptions = {
+								center: new google.maps.LatLng(28.433869, 91.157091),
+								zoom: 6
+							};
+							var map = new google.maps.Map(mapCanvas, mapOptions);
 
-            var loc1 = new google.maps.LatLng(27.965601, 89.714878);
-            var marker = new google.maps.Marker({
-              position: loc1,
-              title: 'Bhutan'
-            });
+							var loc1 = new google.maps.LatLng(27.965601, 89.714878);
+							var marker = new google.maps.Marker({
+								position: loc1,
+								title: 'Bhutan'
+							});
 
-            marker.setMap(map);
+							marker.setMap(map);
 
-            var loc2 = new google.maps.LatLng(27.454292, 87.924939);
-            var marker1 = new google.maps.Marker({
-              position: loc2,
-              title: 'India'
-            });
+							var loc2 = new google.maps.LatLng(27.454292, 87.924939);
+							var marker1 = new google.maps.Marker({
+								position: loc2,
+								title: 'India'
+							});
 
-            marker1.setMap(map);
+							marker1.setMap(map);
 
-            var loc3 = new google.maps.LatLng(29.626684, 95.049795);
-            var marker = new google.maps.Marker({
-              position: loc3,
-              title: 'China'
-            });
+							var loc3 = new google.maps.LatLng(29.626684, 95.049795);
+							var marker = new google.maps.Marker({
+								position: loc3,
+								title: 'China'
+							});
 
-            marker.setMap(map);
+							marker.setMap(map);
 
 
-        }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDolMQeH5yfrBaD_DZmWADouoViHp9M6sQ&callback=myMap"></script>
-      </div>
-    </div>
+						}
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDolMQeH5yfrBaD_DZmWADouoViHp9M6sQ&callback=myMap"></script>
+				</div>
+			</div>
 
-      <p id="footer">Web Design Final Project 2018</p>
-    </div>
-</body>
+			<p id="footer">Web Design Final Project 2018</p>
+		</div>
+	</body>
+</html>

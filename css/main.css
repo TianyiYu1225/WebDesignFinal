@@ -64,7 +64,12 @@ body{
     padding: 14px 16px;
     text-decoration: none;
 }
-.active, li a:hover{
+
+.navbar .active{
+	color: white;
+}
+
+.navbar .active, li a:hover{
 	border-bottom-style: solid;
 	border-bottom-color: white;
 }
@@ -79,7 +84,7 @@ body{
     font-size: 16px;    
     border: none;
     outline: none;
-    color: white;
+    color: #00bfff;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;

@@ -18,7 +18,7 @@ body{
 
 #pageTitle{
 	text-align: center;
-	background-color: gray;
+	background-color: lightblue;
 	margin: 0px;
 	padding: 0.7em 0em;
 }
@@ -52,14 +52,14 @@ body{
 }*/
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #228b22;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
     float: left;
-    font-size: 16px;
-    color: white;
+    font-size: 18px;
+    color: #00bfff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -133,8 +133,9 @@ body{
 }
 
 #footer{
-	background-color: gray;
+	background-color: #228b22;
 	text-align: right;
+	color: #00bfff;
 	font-size: 16px;
 	font-weight: bold;
 	padding: .5em 0em;
@@ -202,13 +203,11 @@ body{
 
 figure{
 	margin-left: 50px;
-	float: left;
 }
 
 #imgtransparency{
 	width:266px; 
 	height:273px;
-	float: left;
 	margin-top:15px;
 }
 

@@ -69,9 +69,10 @@ body{
 	color: white;
 }
 
-.navbar .active, li a:hover{
+.active, .navbar a:hover{
 	border-bottom-style: solid;
 	border-bottom-color: white;
+	color: white;
 }
 
 .dropdown {

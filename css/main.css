@@ -110,7 +110,7 @@ body{
 }
 
 .dropdown-content a:hover {
-    background-color: #ff0000;
+    background-color: #00bfff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -180,6 +180,7 @@ body{
 #socialMediaDiv{
 	margin-left: 50px;
 	margin-top: 250px;
+	/*position: relative;*/
 }
 
 #smtext{
@@ -307,4 +308,21 @@ figure{
 
 #landingbtn:hover{
 	background-color: rgb(186, 227, 255);
+}
+
+.bio{
+	width: 270px;
+	margin-left: 50px;
+	position: relative;
+	float: left;
+	margin-top: 20px;
+}
+
+.biotext{
+	float: left;
+	margin-left: 30px;
+}
+
+.Clear{
+   clear:both;
 }
